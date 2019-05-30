@@ -1,0 +1,79 @@
+.SignUp-darkSide{
+    background-color: #000;
+    width: 40vw;
+    height: 100vh;
+    float :right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.SignUp-brightSide{
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.SignUp-Title{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.SignUp-Title img{
+    transform: scale(0.9);
+    padding: 0;
+    margin: 0;
+}
+
+.SignUp-Form{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.SignUp-Form input{
+    margin: 10px 0;
+    border: 1px solid rgba(78, 78, 78, 0.555);
+    padding: 10px;
+    border-radius: 5px;
+    height: 5vh;
+    outline: none;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.SignUp-CountryCode{
+    height: 7vh;
+    border-radius: 5px;
+    margin: 5px;
+    padding:10px;
+}
+
+.SignUp-Btn{
+    background-color: rgb(255, 255, 21);
+    outline: none;
+    color: black;
+    font-size: 2.5em;
+    width: 25vw;
+    height: 9vh;
+    border: none;
+    border-radius: 40px;
+    margin-top: 2vw;
+}
+
+.SignUpPhoneCode{
+    display: flex;
+    width: 105%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+

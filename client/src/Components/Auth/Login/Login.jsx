@@ -9,7 +9,8 @@ export default class Login extends Component {
         
         this.state = {
             Phone: "",
-            OTP: ""
+            OTP: "",
+            CountryCode: ""
         }
 
     }
@@ -46,6 +47,12 @@ export default class Login extends Component {
         console.log("welcome mr. whose phone number is : " + this.state.Phone)
     }
 
+    handleSelect = (e)=>{
+        this.setState({
+            CountryCode: e.target.value
+        })
+    }
+
     render() {
         return (
             <div className="LoginPage">
@@ -58,7 +65,7 @@ export default class Login extends Component {
                     <form onSubmit= {this.handlePhone}  className="Login-Input" id="Login-Phone-div">
                         
                         <div className="LoginPhoneCode">
-                            <select className="Login-CountryCode">
+                            <select className="Login-CountryCode" value={this.state.CountryCode} onChange = {this.handleSelect} >
                             <option>+91</option>
                             <option>0</option>
                             <option>21</option>
