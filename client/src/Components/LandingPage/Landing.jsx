@@ -22,7 +22,7 @@ export default class Landing extends Component {
                             <li>Partners</li>
                             <li>How it works</li>
                             <li>Login</li>
-                            <li><button className="yltxt signup-btn">Signup</button></li>
+                            <li><button className="yltxt signup-btn">Sign up</button></li>
                         </ul>                    
                     </nav>
                 </header>
@@ -100,10 +100,10 @@ export default class Landing extends Component {
                     </div >
                     <div className='footer1'>
                     <div className="footer-contact">
-                    <i className="fas fa-phone-volume">+91XXXXXXXXXX</i>
+                    <i className="fas fa-phone-volume"> +91XXXXXXXXXX</i>
                     </div>
                     <div className="footer-social">
-                        <span >Follow us on social media</span>
+                        <span >Follow us on social media </span>
                         <i className="fab fa-facebook-square"></i>
                         <i className="fab fa-instagram"></i>
                         <i className="fab fa-linkedin"></i>
