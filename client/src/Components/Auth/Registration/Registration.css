@@ -1,0 +1,31 @@
+.Registration-Title{
+    padding: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Registration-Title img{
+    width: 10vh;
+    height:10vh;
+}
+
+.Registration-Title h3{
+    padding-left: 20px;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.regActive{
+    display: flex;
+}
+
+.regInactive{
+    display: none;
+}
+
+.regdiv{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(242, 249, 255);
+}
