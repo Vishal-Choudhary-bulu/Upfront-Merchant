@@ -16,13 +16,13 @@ export default class Login extends Component {
 
     handleChangePhone = (e)=>{
         this.setState({
-            "Phone" : e.target.value
+            "Phone" : String(e.target.value).length <= 10? (e.target.value) : (this.state.Phone)
         })
     }
 
     handleChangeOtp = (e)=>{
         this.setState({
-            "OTP" : e.target.value
+            "OTP" : String(e.target.value).length <= 6? (e.target.value) : (this.state.OTP)
         })
     }
 
@@ -65,7 +65,7 @@ export default class Login extends Component {
                             <option>115</option>
                             <option>211</option>
                             </select>
-                            <input type="string" name="Phone" className="Login-Input-bar" placeholder="Phone Number" onChange={this.handleChangePhone} value={this.state.Phone} />
+                            <input type="string" name="Phone" className="Login-Input-bar" placeholder="Phone Number" onChange={this.handleChangePhone} value={this.state.Phone} autoComplete="off" autoFocus />
                         </div>
                             <button className="Login-Btn" onClick={this.handlePhone}>
                                 Send OTP
@@ -74,7 +74,7 @@ export default class Login extends Component {
                     </form>
 
                     <form className="DisplayNone" id="Login-OTP-div" onSubmit = {this.handleLogin}>
-                        <input type="string" name="OTP" className="Login-Input-bar" placeholder="Enter OTP" onChange={this.handleChangeOtp} value={this.state.OTP} />
+                        <input type="string" name="OTP" className="Login-Input-bar" placeholder="Enter OTP" onChange={this.handleChangeOtp} value={this.state.OTP} autoComplete="off" />
                             <button className="Login-Btn" onClick={this.handleLogin}>
                                 Login
                             </button>
