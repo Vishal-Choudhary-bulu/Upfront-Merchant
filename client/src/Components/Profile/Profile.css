@@ -1,0 +1,42 @@
+.admin-logo {
+    height: 36px;
+    width: 36px;
+    margin: 5px;
+}
+
+.profile {
+    display:flex;
+
+}
+
+.admin {
+    height:100vw;
+    width: 40%;
+    background: yellow;
+    float: left;
+    padding: 0 20px;
+}
+
+.admin-pic {
+    height: 200px;
+    width: 200px; 
+}
+
+.admin-pic-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-rest {
+    width:60%;
+    padding-left:20px;
+}
+
+.profile-nav ul {
+    width:40%;
+    padding: 0 20px;
+    float:right;
+    display:flex;
+    justify-content: space-around;
+    list-style: none;
+}
