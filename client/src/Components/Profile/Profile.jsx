@@ -17,7 +17,7 @@ export default class Profile extends Component {
         restaurant: {
             name:'Richmond café and restaurant',
             cuisines: ['Vegetarian', 'Non-Vegetarian', 'Chinese'],
-            phone: '1234567890',
+            phone: ' 1234567890',
             location:"32, walter highway, luxa street North London, Europe.",
             rating:4.5,
             gst:'QWERT12345',
@@ -60,7 +60,7 @@ export default class Profile extends Component {
                     <nav className='profile-nav'>
                         <ul>
                             <li><i className="fas fa-home"></i>Home</li>
-                            <li className="ylbg">Statistics</li>
+                            <li className="ylbg profile-nav-btn">Statistics</li>
                             <li><i className="fas fa-sign-out-alt"></i>Logout</li>
                         </ul>
                     </nav>
@@ -80,7 +80,7 @@ export default class Profile extends Component {
                     <div className="profile-rest-timings">{this.state.restaurant.optime} - {this.state.restaurant.cltime}</div>
                     <div className="profile-rest-details">
                         <div className="profile-bold-txt" >Ratings</div>
-                        <div className="profile-bold-txt" >Reviews <button>See all reviews</button></div>
+                        <div className="profile-bold-txt" >Reviews   <button className='profile-review-btn'>See all reviews</button></div>
                         <div className="profile-gst-pan">
                             <div className="profile-gst">
                                 <div className="profile-bold-txt" >GST number</div>
@@ -106,8 +106,8 @@ export default class Profile extends Component {
                         <div className="profile-bold-txt" >Customer support</div>
                     </div>
                     <div className="profile-supp-btns">
-                        <button className="ylbg">Complaints</button>
-                        <button className="ylbg">Feedbacks</button>
+                        <button className="ylbg profile-supp-btn">Complaints </button>
+                        <button className="ylbg profile-supp-btn">Feedbacks</button>
                     </div>
                 </div>
             </div>
