@@ -11,10 +11,6 @@
     margin-left:5vw;
 }
 
-.picture {
-    height:100px;
-    width:100px;
-}
 
 header nav {
     display:flex;
@@ -83,6 +79,10 @@ header nav {
 
 .ylbg{
     background: yellow;
+    
+}
+
+.sec1-btn{
     border-radius: 50px;
     height: 50px;
     width:150px;
