@@ -55,11 +55,11 @@
     list-style: none;
 }
 
-<<<<<<< HEAD
-.profile restaurant name{
+.profile-restaurant name{
     font-size: 50px;
     font-weight: bold;
-=======
+}
+
 .profile-bold-txt {
     font: size 37;
     font-family: montserrat;
@@ -79,5 +79,5 @@
 
 .profile-gst-pan {
     display: flex;
->>>>>>> 9027571f9e1e94d46cb15365909af5f559ece69c
+
 }
