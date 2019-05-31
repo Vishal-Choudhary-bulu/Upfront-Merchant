@@ -59,7 +59,7 @@
 }
 
 .Login-Btn{
-    background-color: rgb(255, 255, 21);
+    background-color: var(--ylbg);
     outline: none;
     color: black;
     font-size: 2.5em;

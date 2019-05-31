@@ -1,8 +1,25 @@
+/* .Registration-Page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 .Registration-Title{
     padding: 5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.RegFormfields{
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
 }
 
 .Registration-Title img{
@@ -16,16 +33,123 @@
     font-weight: 500;
 }
 
-.regActive{
-    display: flex;
-}
-
-.regInactive{
-    display: none;
-}
-
 .regdiv{
     width: 100%;
-    height: 60vh;
-    background-color: rgb(242, 249, 255);
+    padding-left: 35vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+}
+input{
+    outline: none;
+}
+select{
+    outline: none;
+}
+
+.Verify-Input-bar{
+    width: 30vw;
+    height: 4vw;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(180, 180, 180, 0.616);
+    font-size: 1.2em;
+}
+
+.label{
+    font-size: 1.4em;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.Verify-Input-bar-phone{
+    width: 24vw;
+    height: 4vw;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(180, 180, 180, 0.616);
+    font-size: 1.2em;
+}
+
+.Verify-CountryCode{
+    width: 4.8vw;
+    height: 4.1vw;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1.5px solid rgba(180, 180, 180, 0.616);
+    margin-right: 1vw;
+    font-size: 1.1em;
+}
+
+
+.regBtns{
+    position: fixed;
+    bottom: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regBtns button{
+    margin: 0 2vw;
+    width: 8vw;
+    border: none;
+    height: 3vw;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 1.3em;
+
+}
+.FileInput{
+    margin: 0 10px;
+}
+
+ .FileInput::-webkit-file-upload-button {
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    outline: none;
+    cursor: grab;
+    font-weight: bolder;
+} 
+
+#regbackbtn{
+    background-color: rgb(233, 233, 233);
+}
+
+#regnextbtn{
+    background-color:var(--ylbg);
+}
+
+.StepIcons{
+    position: fixed;
+    bottom: 5vh;
+    left: 40vw;
+    width: 20vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stepIcon{
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    padding: 1vh;
+    width: 10vh;
+    height: 3vh;
+    line-height: 1.3;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.reg-line{
+    border-top: 2px solid black;
+    width: 100%;
 }
