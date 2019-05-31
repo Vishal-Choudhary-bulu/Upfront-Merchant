@@ -10,11 +10,14 @@
 }
 
 .admin {
-    height:100vw;
     width: 40%;
     background: yellow;
     float: left;
     padding: 0 20px;
+}
+
+.admin-title {
+    margin:20px 0;
 }
 
 .admin-pic {
@@ -27,9 +30,20 @@
     justify-content: center;
 }
 
+.admin-details {
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .profile-rest {
     width:60%;
     padding-left:20px;
+}
+
+.profile-rest-title {
+    margin:30px 0;
 }
 
 .profile-nav ul {
@@ -39,4 +53,25 @@
     display:flex;
     justify-content: space-around;
     list-style: none;
+}
+
+.profile-bold-txt {
+    font: size 37;
+    font-family: montserrat;
+    font-weight:bolder;
+}
+.profile-rest-details {
+    height:25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.profile-normal-txt {
+    font: size 37;
+    font-family: montserrat;
+}
+
+.profile-gst-pan {
+    display: flex;
 }

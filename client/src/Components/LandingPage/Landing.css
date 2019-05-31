@@ -11,11 +11,6 @@
     margin-left:5vw;
 }
 
-.picture {
-    height:100px;
-    width:100px;
-}
-
 header nav {
     display:flex;
     justify-content: space-between;
@@ -94,8 +89,7 @@ header nav {
 
 .picture{
     height: 400px;
-    width:500px;
-    
+    width:500px;    
 }
 
 .picture1{
