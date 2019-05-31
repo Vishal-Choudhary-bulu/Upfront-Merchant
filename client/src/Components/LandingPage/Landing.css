@@ -11,7 +11,10 @@
     margin-left:5vw;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9027571f9e1e94d46cb15365909af5f559ece69c
 header nav {
     display:flex;
     justify-content: space-between;
@@ -94,8 +97,7 @@ header nav {
 
 .picture{
     height: 400px;
-    width:500px;
-    
+    width:500px;    
 }
 
 .picture1{

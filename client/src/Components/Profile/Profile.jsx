@@ -24,7 +24,7 @@ export default class Profile extends Component {
             pan:'ASDFG6789',
             optime: '8 A.M.',
             cltime: '10 P.M.',
-            branches:[ ]
+            branches:['Indira nagar-- 32, walter highway, luxa street, North London, Europe.','Indira nagar-- 2/5, kiddy corner, 3rd street, London, Europe.','Koramangala-- 2/5, kiddy corner, 3rd street, London, Europe.' ]
         }
     }
 
@@ -33,20 +33,27 @@ export default class Profile extends Component {
     render() {
 
         const Cuisines = this.state.restaurant.cuisines.map((e)=>(e+" "))
+        const Branches = this.state.restaurant.branches.map((e,key)=>{
+            return (
+                <div>{(key+1)+'. '+e}</div>
+            )
+        })
 
         return (
             <div className="profile">
                 <div className="admin">
                     <img src={Logo} alt="logo" className="admin-logo"/>
-                    <h2 className="admin-title">Admin details</h2>
+                    <div className="admin-title profile-normal-txt">Admin details</div>
                     <div className="admin-pic-wrap">
                         <img src={Photo} alt="photo" className="admin-pic"/>
                         <i className="fal fa-plus-circle"></i>
                     </div>
-                    <div>{this.state.admin.name}</div>
-                    <div>{this.state.admin.phone}</div>
-                    <div>{this.state.admin.email}</div>
-                    <div>{this.state.admin.location}</div>
+                    <div className="admin-details profile-normal-txt">
+                        <div>{this.state.admin.name}</div>
+                        <div>{this.state.admin.phone}</div>
+                        <div>{this.state.admin.email}</div>
+                        <div>{this.state.admin.location}</div>
+                    </div>    
                     <button className="admin-update-btn">Update</button>
                 </div>
                 <div className="profile-rest">    
@@ -57,7 +64,7 @@ export default class Profile extends Component {
                             <li>Logout</li>
                         </ul>
                     </nav>
-                    <h2 className="profile-rest-title">Restaurant details</h2>
+                    <div className="profile-rest-title profile-normal-txt">Restaurant details</div>
                     <div className="profile-rest-header">
                         <div>
                             <img src={Img} alt="image" className="profile-rest-img"/>
@@ -69,25 +76,30 @@ export default class Profile extends Component {
                     <div>{this.state.restaurant.phone}</div>
                     </div>
                     <div>{this.state.restaurant.optime} - {this.state.restaurant.cltime}</div>
-                    <div>Ratings</div>
-                    <div>Reviews <button>See all reviews</button></div>
-                    <div>
-                        <div>
-                            <div>GST number</div>
-                            <div>{this.state.restaurant.gst}</div>
+                    <div className="profile-rest-details">
+                        <div className="profile-bold-txt" >Ratings</div>
+                        <div className="profile-bold-txt" >Reviews <button>See all reviews</button></div>
+                        <div className="profile-gst-pan">
+                            <div>
+                                <div className="profile-bold-txt" >GST number</div>
+                                <div>{this.state.restaurant.gst}</div>
+                            </div>
+                            <div>
+                                <div className="profile-bold-txt" >PAN number</div>
+                                <div>{this.state.restaurant.pan}</div>
+                            </div>
                         </div>
-                        <div>
-                            <div>PAN number</div>
-                            <div>{this.state.restaurant.pan}</div>
+                        <div className="profile-rest-location-wrap">
+                            <div className="profile-bold-txt" >Location</div>
+                            <div>{this.state.restaurant.location}</div>
                         </div>
+                        <div className="profile-bold-txt" >Landmarks nearby</div>
+                        <div className="profile-rest-bracher-wrap">
+                            <div className="profile-bold-txt" >Other branches  <i class="fas fa-plus-circle"></i>Add/Modify branch</div>
+                            <div className="profile-rest-branches">{Branches}</div>
+                        </div>
+                        <div className="profile-bold-txt" >Customer support</div>
                     </div>
-                    <div>Location</div>
-                    <div>{this.state.restaurant.location}</div>
-                    <div>Landmarks nearby</div>
-                    <div></div>
-                    <div>Other branches  <i class="fas fa-plus-circle"></i>Add/Modify branch</div>
-                    <div></div>
-                    <div>Customer support</div>
                     <div className="profile-supp-btns">
                         <button className="ylbg">Complaints</button>
                         <button className="ylbg">Feedbacks</button>
