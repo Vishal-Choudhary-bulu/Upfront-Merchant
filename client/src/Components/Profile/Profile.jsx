@@ -22,8 +22,8 @@ export default class Profile extends Component {
             rating:4.5,
             gst:'QWERT12345',
             pan:'ASDFG6789',
-            optime: '8 A.M.',
-            cltime: '10 P.M.',
+            optime: '8:00 AM',
+            cltime: '10:00 PM',
             branches:['Indira nagar-- 32, walter highway, luxa street, North London, Europe.','Indira nagar-- 2/5, kiddy corner, 3rd street, London, Europe.','Koramangala-- 2/5, kiddy corner, 3rd street, London, Europe.' ]
         }
     }
@@ -35,7 +35,7 @@ export default class Profile extends Component {
         const Cuisines = this.state.restaurant.cuisines.map((e)=>(e+" "))
         const Branches = this.state.restaurant.branches.map((e,key)=>{
             return (
-                <div>{(key+1)+'. '+e}</div>
+                <div className="profile-normal-txt" key={key}>{(key+1)+'. '+e}</div>
             )
         })
 
@@ -46,7 +46,7 @@ export default class Profile extends Component {
                     <div className="admin-title profile-normal-txt">Admin details</div>
                     <div className="admin-pic-wrap">
                         <img src={Photo} alt="photo" className="admin-pic"/>
-                        <i className="fal fa-plus-circle"></i>
+                        <i className="fas fa-plus-circle"></i>
                     </div>
                     <div className="admin-details profile-normal-txt">
                         <div>{this.state.admin.name}</div>
@@ -59,43 +59,48 @@ export default class Profile extends Component {
                 <div className="profile-rest">    
                     <nav className='profile-nav'>
                         <ul>
-                            <li>Home</li>
+                            <li><i className="fas fa-home"></i>Home</li>
                             <li className="ylbg">Statistics</li>
-                            <li>Logout</li>
+                            <li><i className="fas fa-sign-out-alt"></i>Logout</li>
                         </ul>
                     </nav>
                     <div className="profile-rest-title profile-normal-txt">Restaurant details</div>
                     <div className="profile-rest-header">
-                        <div>
+                        <div className="profile-rest-img-wrap">
                             <img src={Img} alt="image" className="profile-rest-img"/>
                         </div>
+                        <div>                  
+                            <div className="profile-rest-des-wrap">
+                                <div className="profile-bold-txt profile-rest-name">{this.state.restaurant.name}</div>
+                                <div className="profile-rest-rem-txt">{Cuisines}</div>
+                                <div className="profile-rest-rem-txt" ><i className="fas fa-phone-volume"></i>{this.state.restaurant.phone}</div>
+                            </div>
+                        </div>  
                     </div>
-                    <div>
-                        <div>{this.state.restaurant.name}</div>
-                        <div>{Cuisines}</div>
-                    <div>{this.state.restaurant.phone}</div>
-                    </div>
-                    <div>{this.state.restaurant.optime} - {this.state.restaurant.cltime}</div>
+                    <div className="profile-rest-timings">{this.state.restaurant.optime} - {this.state.restaurant.cltime}</div>
                     <div className="profile-rest-details">
                         <div className="profile-bold-txt" >Ratings</div>
                         <div className="profile-bold-txt" >Reviews <button>See all reviews</button></div>
                         <div className="profile-gst-pan">
-                            <div>
+                            <div className="profile-gst">
                                 <div className="profile-bold-txt" >GST number</div>
-                                <div>{this.state.restaurant.gst}</div>
+                                <div className="profile-normal-txt">{this.state.restaurant.gst}</div>
                             </div>
-                            <div>
+                            <div className="profile-pan">
                                 <div className="profile-bold-txt" >PAN number</div>
-                                <div>{this.state.restaurant.pan}</div>
+                                <div className="profile-normal-txt">{this.state.restaurant.pan}</div>
                             </div>
                         </div>
                         <div className="profile-rest-location-wrap">
                             <div className="profile-bold-txt" >Location</div>
-                            <div>{this.state.restaurant.location}</div>
+                            <div className="profile-normal-txt profile-rest-location">{this.state.restaurant.location}</div>
                         </div>
                         <div className="profile-bold-txt" >Landmarks nearby</div>
-                        <div className="profile-rest-bracher-wrap">
-                            <div className="profile-bold-txt" >Other branches  <i class="fas fa-plus-circle"></i>Add/Modify branch</div>
+                        <div className="profile-rest-branches-wrap">
+                            <div className="profile-branches-header">
+                                <div className="profile-bold-txt" >Other branches</div> 
+                                <div className="profile-normal-txt profile-modify-branch"><i className="fas fa-plus-circle"></i> Add/Modify branch</div>
+                            </div>
                             <div className="profile-rest-branches">{Branches}</div>
                         </div>
                         <div className="profile-bold-txt" >Customer support</div>
