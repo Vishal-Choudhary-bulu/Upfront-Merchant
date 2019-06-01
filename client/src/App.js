@@ -1,5 +1,6 @@
 import React from 'react';
-import Registration from './Components/Auth/Registration/Registration';
+import Inventory from './Components/Inventory/Inventory/Inventory';
+// import Registration from './Components/Auth/Registration/Registration';
 // import SignUp from './Components/Auth/SignUp/SignUp';
 // import Login from './Components/Auth/Login/Login';
 
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       {/* <Login/> */}
       {/* <SignUp /> */}
-      <Registration />
+      {/* <Registration /> */}
+      <Inventory />
     </div>
   );
 }
