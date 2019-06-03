@@ -1,16 +1,15 @@
-.logo{
+.landing-logo{
     height: 60px;
     width: 60px;
 }
 
-.header-logo{
+.landing-header-logo{
     display:flex;
     align-items: center;
     
     width: 10vw;
     margin-left:5vw;
 }
-
 header nav {
     display:flex;
     justify-content: space-between;
@@ -26,20 +25,20 @@ header nav {
     color:black;
 }
 
-.header-links{
+.landing-header-links{
     display:flex;
     width: 60vw;
     justify-content: space-between;
     list-style: none;
     font-size: 2em;
     align-items: center;
-    word-spacing: .2px;
+    word-spacing: 2px;
     margin-right: 3vw;
     font-weight: bold;
 
 }
 
-.signup-btn{
+.landing-signup-btn{
     height: 60px;
     width:200px;
     font-size: 30px;
@@ -57,14 +56,14 @@ header nav {
 
 }
 
-.logo-text{
+.landing-logo-text{
     
     font-size: 50px;
     font-weight: bold;
     
 }
 
-.sec1{
+.landing-sec1{
     display:flex;
     width:80vw;
     display: flex;
@@ -79,26 +78,47 @@ header nav {
 .ylbg{
     background: yellow;
     
+
+}
+
+.landing-sec1-btn{
+    border-radius: 50px;
+    height: 50px;
+    width:150px;
+    border:none;
+    font-size: 20px;
+    font-weight: normal;
+
 }
 
 
-.picture{
+.landing-pic1{
     height: 400px;
     width:500px;    
 }
 
-.picture1{
+
+.landing-pic2{
+    height: 400px;
+    width:500px;    
+}
+
+.landing-pic3{
+    height: 400px;
+    width:500px;    
+}
+.landing-partner-pic1{
     height:200px;
     width:250px;
 
 }
 
-.sec1-title{
+.landing-sec1-title{
     font-size: 60px;
     font-weight: bold;
 }
 
-.sec2{
+.landing-sec2{
     display:flex;
     width:80vw;
     display: flex;
@@ -108,14 +128,14 @@ header nav {
     
 }
 
-.sec2-title{
+.landing-sec2-title{
     font-size: 50px;
     font-weight: bold;
 }
 
 
 
-.sec3{
+.landing-sec3{
     display:flex;
     
     width:80vw;
@@ -126,26 +146,22 @@ header nav {
     
 }
 
-.sec3-title{
+.landing-sec3-title{
     font-size: 50px;
     font-weight: bold;
    
 }
 
 .landing-footer{
-    
     background:#222;
     text-align: center;
-   
     font-size:40px;
     font-weight: bold;
     padding-top: 10px;
 }
 
-.footer-boxes{
+.landing-footer-boxes{
     display:flex;
-  
-    
     width:80vw;
     display: flex;
     align-items: center;
@@ -157,27 +173,27 @@ header nav {
     
 
 }
- .box{
+ .landing-box{
      padding-top: 10px;
      height:150px;
      width:200px;
  }
-    .box img{
+    .landing-box img{
         height:30px;
         width:30px;
     }
     
-    .box h4{
+    .landing-box h4{
         margin:0px;
         margin-top: 10px;
     }
 
 
-.ftitle{
+.landing-footer-title{
     font-size: 20px;
 }
 
-.fcontent{
+.landing-footer-content{
     font-size: 15px;
     text-align: left;
    color: grey;
@@ -186,13 +202,13 @@ header nav {
    
 }
 
-.box{
+.landing-box{
     border-color: yellow;
     border-style: solid;
     margin:0 15px ;
 }
 
-.footer1{
+.landing-footer-contact{
     
     
     width:100%;
@@ -204,22 +220,22 @@ header nav {
 
 }
 
-.footer-social{
+.landing-footer-social{
     margin-right: 2vw;
-    font-size: 20px;
+    font-size: .5em;
     text-align: right;
     color: white;
    
 }
 
-.footer-contact i{
-    font-size: 20px;
+.landing-footer-phone i{
+    font-size: .5em;
     color: white;
     margin-left: 2vw;
     
 }
 
-.footer-social i {
+.landing-footer-social i {
 margin:0 3px;
 }
 
