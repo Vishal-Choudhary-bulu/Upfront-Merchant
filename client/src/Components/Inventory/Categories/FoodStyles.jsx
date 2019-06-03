@@ -65,6 +65,10 @@ export default class FoodStyles extends Component {
                name : "",
                id: "9"
            }
+
+           this.setState({
+               SelectedItem: item
+           })
        }
 
        UpdateCategory = (data)=>{
