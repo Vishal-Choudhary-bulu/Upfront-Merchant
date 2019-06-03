@@ -1,0 +1,52 @@
+.FoodStyles{
+    padding: 20px;
+    background : linear-gradient(rgba(255, 208, 0, 0.836),rgba(226, 22, 8, 0.836));
+}
+
+.foodCategory{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foodCategoryName {
+    padding: 0;
+    margin : 15px 0;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.foodCategoryEditIcon{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+}
+
+.FoodStylesTitle{
+    font-weight: bolder;
+    font-size: 1.8em;
+    padding: 10px 10px 30px 0;
+}
+
+
+.AddCategoryButton button{
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 7px;
+    font-size: 1.6em;
+    outline: none;
+}
+
+.toOrdersRouteBtn{
+    border: none;
+    background-color: #fff0;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
