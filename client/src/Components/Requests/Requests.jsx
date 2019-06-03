@@ -48,9 +48,9 @@ export default class Requests extends Component {
 
             return (
 
-                <tr key={key}>
+                
 
-                <tr className='request-row'>
+                <tr key={key} className='request-row'>
 
                     <td>{key+1}</td>
                     <td>{e.orderId}</td>
@@ -58,6 +58,7 @@ export default class Requests extends Component {
                     <td>{quantity}</td>
                     <td>{e.time}</td>
                 </tr>
+                
             )
         })
 
@@ -65,7 +66,7 @@ export default class Requests extends Component {
             <div>
                 <div className="requests-items-wrap">
                     <div>53 Requests</div>
-                    <div className="requests-itemsbtn-wrap "><button className="requests-itemsbtn">Available Items</button></div>
+                    <div className="requests-itemsbtn-wrap "><button className="requests-itemsbtn">  Available Items</button></div>
                 </div>
                 <table className='request-table'>
                     <tr className='request-header-row'>
