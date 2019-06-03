@@ -47,12 +47,12 @@ export default class Requests extends Component {
             const quantity = e.quantity.map((f)=>(<div>{f}</div>))
 
             return (
-                <tr>
-                    <th>{key+1}</th>
-                    <th>{e.orderId}</th>
-                    <th>{items}</th>
-                    <th>{quantity}</th>
-                    <th>{e.time}</th>
+                <tr className='request-row'>
+                    <td>{key+1}</td>
+                    <td>{e.orderId}</td>
+                    <td>{items}</td>
+                    <td>{quantity}</td>
+                    <td>{e.time}</td>
                 </tr>
             )
         })
@@ -63,8 +63,8 @@ export default class Requests extends Component {
                     <div>53 Requests</div>
                     <div className="requests-itemsbtn-wrap "><button className="requests-itemsbtn">Available Items</button></div>
                 </div>
-                <table>
-                    <tr>
+                <table className='request-table'>
+                    <tr className='request-header-row'>
                         <th>S.No</th>
                         <th>Order Id</th>
                         <th>Items</th>
