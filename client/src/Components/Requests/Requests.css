@@ -6,6 +6,7 @@
     float:right;
     align-items: center;
     font-size: 1.2em;
+    
 }
 
 .requests-itemsbtn {
@@ -24,6 +25,10 @@
 
 .requests-itemsbtn-wrap {
     width:50%;
+<<<<<<< HEAD
+=======
+   
+>>>>>>> a87fb7176d5dae840b7982fd6a3d7bfbc9cb9b1c
 }
 
 .request-row{

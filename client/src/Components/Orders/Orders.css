@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: flex-end;
     padding:0;
+
 }
 
 .orders-typelist li {
@@ -35,6 +36,10 @@
     background: rgba(172, 169, 169, 0.521);
     border-radius: .2em;
     margin-right: 20%;
+    margin-left: 2vw;
+    margin-bottom: 30px;
+    
+    
 }
 
 .orders-orangebar {
@@ -44,4 +49,99 @@
     background:linear-gradient(90deg, rgba(255, 208, 0, 0.836), rgba(226, 22, 8, 0.836));
     border-radius: .2em;
     display:flex;
+    
+}
+
+.processing-table{
+    border-collapse:collapse; 
+    margin-top: 5px;
+    width: 100%;
+    padding-top: 12px 2em;
+
+    text-align: left;
+    justify-content: space-around;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 12px;
+    
+}
+
+.completed-table{
+    border-collapse:collapse; 
+    margin-top: 5px;
+    width: 100%;
+    padding-top: 12px 2em;
+    padding-bottom: 12px;
+    text-align: left;
+    justify-content: space-around;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 12px;
+
+}
+
+.all-table{
+    border-collapse:collapse; 
+    margin-top: 5px;
+    width: 100%;
+    padding-top: 12px 2em;
+    padding-bottom: 12px;
+    text-align: left;
+    justify-content: space-around;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 12px;
+
+}
+
+.processing-table-row {
+     
+    text-align: left;
+    color: black;
+    border-radius:12px;
+    background-color:#F5F5F5;   
+    border-spacing:0 15px; 
+
+}
+
+.completed-table-row {
+     
+    text-align: left;
+    color: black;
+    border-radius:12px;
+    background-color:#F5F5F5;   
+    border-spacing:0 15px; 
+}
+
+.processing-table-row td{
+  
+    padding: 1em;
+    border-radius:12px;
+    border-bottom: .65em solid white;
+    
+}
+
+.completed-table-row td{
+    padding: 1em;
+   
+    border-radius:12px;
+    border-bottom: .65em solid white;
+}
+
+.all-table-row {
+       
+    text-align: left;
+    color: black;
+    border-radius:12px;
+    background-color:white;   
+    border-spacing:0 15px; 
+    border-radius: 15px 50px;
+    width: 100%;
+   
+}
+
+.all-table-row td{
+    padding: 1em;
+    
+    border-bottom: .65em solid white;
 }

@@ -33,7 +33,7 @@ export default class Orders extends Component {
             const quantity = f.quantity.map((g,key1)=>(<div key={key1}>{g}</div>))
 
             return (
-                <tr key={key}>
+                <tr key={key} className ='processing-table-row'>
                     <td>{f.orderId}</td>
                     <td>{items}</td>
                     <td>{quantity}</td>
@@ -52,7 +52,7 @@ export default class Orders extends Component {
             const quantity = f.quantity.map((g,key1)=>(<div key={key1}>{g}</div>))
 
             return (
-                <tr key={key}>
+                <tr key={key} className ='completed-table-row'>
                     <td>{f.orderId}</td>
                     <td>{items}</td>
                     <td>{quantity}</td>
@@ -68,7 +68,7 @@ export default class Orders extends Component {
             const item = e.items.length<=2 ? e.items.join(', '): (e.items.slice(0,2).join(', ') +' +'+ (e.items.length-2))
 
             return (
-                <tr key={key}>
+                <tr key={key} className='all-table-row'>
                     <td>#{e.orderId}</td>
                     <td>{item}</td>
                     <td>{e.status}</td>
@@ -80,7 +80,7 @@ export default class Orders extends Component {
         })
 
         const allTable = (
-            <table>
+            <table className='all-table'>
                 <tr>
                     <th>Order Id</th>
                     <th>Items</th>
@@ -94,7 +94,7 @@ export default class Orders extends Component {
         )
 
         const processingTable = (
-            <table>
+            <table className='processing-table'>
                 <tr>
                     <th>Order Id</th>
                     <th>Items</th>
@@ -108,8 +108,8 @@ export default class Orders extends Component {
         )
 
         const completedTable = (
-            <table>
-                <tr>
+            <table className='completed-table'>
+                <tr >
                     <th>Order Id</th>
                     <th>Items</th>
                     <th>Quantity</th>
