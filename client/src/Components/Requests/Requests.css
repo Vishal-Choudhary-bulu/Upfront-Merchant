@@ -1,7 +1,7 @@
 .requests-items-wrap {
     width:25vw;
     padding:0 2em;
-    display:flex;
+    display:flex !important;
     justify-content: space-around;
     float:right;
     align-items: center;
@@ -28,39 +28,25 @@
 }
 
 .request-row{
-   
     text-align: left;
     color: black;
     border-radius:12px;
     background-color:#F5F5F5;   
     border-spacing:0 15px; 
-    
-   
-
-    
-
-
-
 }
 
 .request-table{
     border-collapse:collapse; 
-    margin-top: 5px;
+    margin-top:0;
     width: 100%;
-    padding-top: 12px 2em;
-    padding-bottom: 12px;
+    padding-top: 12px 0;
     text-align: left;
     justify-content: space-around;
-    margin-left: 3vw;
     margin-right: 3vw;
-    border-radius: 12px;
-   
+    border-radius: 12px;  
 }
 
 .request-row td {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    
-    border-bottom: .65em solid white;
-  }
+    padding: 1em;
+}
 

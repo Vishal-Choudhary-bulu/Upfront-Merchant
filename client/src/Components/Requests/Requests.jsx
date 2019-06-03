@@ -47,11 +47,7 @@ export default class Requests extends Component {
             const quantity = e.quantity.map((f,key1)=>(<div key={key1}>{f}</div>))
 
             return (
-<<<<<<< HEAD
-                <tr key={key}>
-=======
-                <tr className='request-row'>
->>>>>>> 89adc44fdff88cf6be8515b3c937f53539821375
+                <tr key={key} className='request-row'>
                     <td>{key+1}</td>
                     <td>{e.orderId}</td>
                     <td>{items}</td>
@@ -67,16 +63,18 @@ export default class Requests extends Component {
                     <div>53 Requests</div>
                     <div className="requests-itemsbtn-wrap "><button className="requests-itemsbtn">Available Items</button></div>
                 </div>
-                <table className='request-table'>
-                    <tr className='request-header-row'>
-                        <th>S.No</th>
-                        <th>Order Id</th>
-                        <th>Items</th>
-                        <th>Quantity</th>
-                        <th>Time</th>
-                    </tr>
-                    <tbody>{orders}</tbody>
-                </table>
+                <div>
+                    <table className='request-table'>
+                        <tr className='request-header-row'>
+                            <th>S.No</th>
+                            <th>Order Id</th>
+                            <th>Items</th>
+                            <th>Quantity</th>
+                            <th>Time</th>
+                        </tr>
+                        <tbody>{orders}</tbody>
+                    </table>
+                </div>
             </div>
         )
     }
