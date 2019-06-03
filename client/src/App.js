@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import Inventory from './Components/Inventory/Inventory/Inventory';
+import Inventory from './Components/Inventory/Inventory/Inventory';
 // import Registration from './Components/Auth/Registration/Registration';
 // import SignUp from './Components/Auth/SignUp/SignUp';
 // import Login from './Components/Auth/Login/Login';
@@ -15,9 +15,9 @@ function App() {
       {/* <Login/> */}
       {/* <SignUp /> */}
       {/* <Registration /> */}
-      {/* <Inventory /> */}
+      <Inventory />
       {/* <Orders /> */}
-      <Landing/>
+      {/* <Landing/> */}
     </div>
   );
 }

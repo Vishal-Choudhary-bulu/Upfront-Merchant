@@ -1,12 +1,12 @@
 .Menus{
     height: 100%;
     display: flex;
-    overflow-x: scroll;
     flex-flow: column;
-    padding: 50px 30px;
+    /* overflow-x:hidden; */
 }
 
 .MenusCategory{
+    padding: 20px;
     height: 45vh;
     display: flex;
     flex-flow: column;
@@ -21,7 +21,7 @@
 
 .MenusCards{
     display: flex;
-    overflow: auto;
+
 }
 
 .MenuPhoto{
@@ -37,7 +37,7 @@
     margin: 10px;
     width: 40vh;
     height: 35vh;
-    box-shadow: 1px 1px 1px 3px rgba(160, 160, 160, 0.281);
+    box-shadow: 2px 3px 3px 3px rgba(212, 212, 212, 0.308);
     display: grid;
     grid-template-rows: 4fr 1fr;
     grid-auto-rows: 30vw;
@@ -45,9 +45,37 @@
 
 .MenusNamePrice{
     font-size: 1.4em;
+    font-weight: bold;
     display: flex;
     flex-flow: row;
     align-items:center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
 
+.MenusNamePrice{
+    padding: 1px 10px;
+}
+
+
+.MenuEditor{
+    position: absolute;
+    top:20px;
+    right: 10px;
+}
+
+.UpdateMenus{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.MenuEditBtns{
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    outline: none;
+    margin: 5px;
+    cursor: pointer;
 }
