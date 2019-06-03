@@ -24,7 +24,6 @@
 
 .requests-itemsbtn-wrap {
     width:50%;
-    padding-bottom: .5em;
 }
 
 .request-row{
@@ -36,8 +35,7 @@
 }
 
 .request-table{
-    border-collapse:collapse; 
-    margin-top:0;
+    border-collapse:collapse;
     width: 100%;
     padding-top: 12px 0;
     text-align: left;

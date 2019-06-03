@@ -15,69 +15,6 @@ export default class Orders extends Component {
     state = {
         activeTab:1,
 
-        requests : [
-            {
-                orderId:10000,
-                items:['Chicken biriyani' ,'Veg noodle'],
-                quantity:[2,5],
-                amount:500.00,
-                payment:'cash',
-                paid:false,
-                timeOrder:'3:27 PM',
-                completed:true,
-                status:'Being prepared',
-                timePick:'4:01 PM'
-            },
-            {
-                orderId:10001,
-                items:['Chicken biriyani' ,'Veg noodle','burger','pizza','dosa'],
-                quantity:[2,5,3,3,4],
-                amount:500.00,
-                payment:'online',
-                paid:true,
-                timeOrder:'3:27 PM',
-                status:'Ready',
-                completed:false,
-            },
-            {
-                orderId:10002,
-                items:['Chicken biriyani' ,'Veg noodle'],
-                quantity:[2,5],
-                amount:500.00,
-                payment:'online',
-                paid:true,
-                time:'3:27 PM',
-                amount:500.00,
-                payment:'online',
-                paid:true,
-                timeOrder:'3:27 PM',
-                status:'Ready',
-                completed:false,
-            },
-            {
-                orderId:10003,
-                items:['Chicken biriyani' ,'Veg noodle','Chicken noodles'],
-                quantity:[2,5,1],
-                amount:500.00,
-                payment:'online',
-                paid:true,
-                timeOrder:'3:27 PM',
-                completed:true,
-                status:'Being prepared',
-                timepick:'4:01 PM'
-            },
-            {
-                orderId:10004,
-                items:['Chicken biriyani' ,'Veg noodle'],
-                quantity:[2,5],
-                amount:500.00,
-                payment:'cash',
-                paid:false,
-                timeOrder:'3:27 PM',
-                status:'Being prepared',
-                completed:false,
-            },
-        ]
     }
 
     updateActive = (e) => {
@@ -89,7 +26,7 @@ export default class Orders extends Component {
 
     render() {
 
-        const processing = this.state.requests.filter((e)=>(!e.completed)).map((f,key)=>{
+        const processing = this.props.requests.filter((e)=>(!e.completed)).map((f,key)=>{
 
             const items = f.items.map((g,key1)=>(<div key={key1}>{g}</div>))
 
@@ -108,7 +45,7 @@ export default class Orders extends Component {
         })
 
 
-        const completed = this.state.requests.filter((e)=>(e.completed)).map((f,key)=>{
+        const completed = this.props.requests.filter((e)=>(e.completed)).map((f,key)=>{
 
             const items = f.items.map((g,key1)=>(<div key={key1}>{g}</div>))
 
@@ -126,7 +63,7 @@ export default class Orders extends Component {
             )
         })
 
-        const all = this.state.requests.map((e,key)=>{
+        const all = this.props.requests.map((e,key)=>{
 
             const item = e.items.length<=2 ? e.items.join(', '): (e.items.slice(0,2).join(', ') +' +'+ (e.items.length-2))
 
