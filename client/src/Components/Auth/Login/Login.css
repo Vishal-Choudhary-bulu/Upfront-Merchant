@@ -1,0 +1,89 @@
+/* A helper class for loginpage */
+.DisplayNone{
+    display: none;
+}
+
+/* styles for the login page */
+
+.Login-Title{
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.Login-Title img{
+    transform: scale(0.9);
+    padding: 0;
+    margin: 0;
+}
+
+.Login-darkSide{
+    background-color: #000;
+    width: 40vw;
+    height: 100vh;
+    float :left;
+}
+
+.Login-brightSide{
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    height: 40vh;
+    width: 60vw;
+    float: right;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Login-Input{
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login-Input-bar{
+    border : 1.2px solid rgba(134, 125, 125, 0.534);
+    outline: none;
+    width: 25vw;
+    height: 7vh;
+    padding: 10px;
+    font-size: 2.5em;
+    border-radius: 5px;
+    margin-top: 4vw;
+}
+
+.Login-Btn{
+    background-color: var(--ylbg);
+    outline: none;
+    color: black;
+    font-size: 2.5em;
+    width: 25vw;
+    height: 9vh;
+    border: none;
+    border-radius: 40px;
+    margin-top: 2vw;
+}
+
+.toggle-auth{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px;
+}
+
+.Login-CountryCode{
+    border : 1.2px solid rgba(134, 125, 125, 0.534);
+    height: 9.5vh;
+    padding: 0px;
+    background-color: #fff;
+    font-size: 2.5rem;
+    margin-right:10px;
+    border-radius: 5px;
+    outline:none;
+}
+
