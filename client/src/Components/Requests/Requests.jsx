@@ -42,17 +42,17 @@ export default class Requests extends Component {
 
         const orders = this.state.requests.map((e,key)=>{
 
-            const items = e.items.map((f)=>(<div>{f}</div>))
+            const items = e.items.map((f,key1)=>(<div key={key1}>{f}</div>))
 
-            const quantity = e.quantity.map((f)=>(<div>{f}</div>))
+            const quantity = e.quantity.map((f,key1)=>(<div key={key1}>{f}</div>))
 
             return (
-                <tr>
-                    <th>{key+1}</th>
-                    <th>{e.orderId}</th>
-                    <th>{items}</th>
-                    <th>{quantity}</th>
-                    <th>{e.time}</th>
+                <tr key={key}>
+                    <td>{key+1}</td>
+                    <td>{e.orderId}</td>
+                    <td>{items}</td>
+                    <td>{quantity}</td>
+                    <td>{e.time}</td>
                 </tr>
             )
         })
@@ -71,7 +71,7 @@ export default class Requests extends Component {
                         <th>Quantity</th>
                         <th>Time</th>
                     </tr>
-                    {orders}
+                    <tbody>{orders}</tbody>
                 </table>
             </div>
         )
