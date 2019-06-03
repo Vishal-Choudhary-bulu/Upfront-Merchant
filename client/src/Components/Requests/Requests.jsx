@@ -47,11 +47,11 @@ export default class Requests extends Component {
             const quantity = e.quantity.map((f,key1)=>(<div key={key1}>{f}</div>))
 
             return (
-<<<<<<< HEAD
+
                 <tr key={key}>
-=======
+
                 <tr className='request-row'>
->>>>>>> 89adc44fdff88cf6be8515b3c937f53539821375
+
                     <td>{key+1}</td>
                     <td>{e.orderId}</td>
                     <td>{items}</td>
