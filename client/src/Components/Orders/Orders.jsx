@@ -81,42 +81,48 @@ export default class Orders extends Component {
 
         const allTable = (
             <table className='all-table'>
-                <tr>
-                    <th>Order Id</th>
-                    <th>Items</th>
-                    <th>Status</th>
-                    <th>Amount</th>
-                    <th>Payment</th>
-                    <th>Time</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Order Id</th>
+                        <th>Items</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                        <th>Payment</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
                 <tbody>{all}</tbody>            
             </table>
         )
 
         const processingTable = (
             <table className='processing-table'>
-                <tr>
-                    <th>Order Id</th>
-                    <th>Items</th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th>Payment</th>
-                    <th>Time</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Order Id</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Payment</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
                 <tbody>{processing}</tbody>
             </table>
         )
 
         const completedTable = (
             <table className='completed-table'>
-                <tr >
-                    <th>Order Id</th>
-                    <th>Items</th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th>Payment</th>
-                    <th>Time</th>
-                </tr>
+                <thead>
+                    <tr >
+                        <th>Order Id</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Payment</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
                 <tbody>{completed}</tbody>
             </table>
         )

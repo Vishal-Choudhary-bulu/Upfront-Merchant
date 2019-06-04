@@ -29,7 +29,7 @@ export default class ordersStatus extends Component {
                 paid:false,
                 timeOrder:'3:27 PM',
                 completed:true,
-                status:'Being prepared',
+                status:'Completed',
                 timePick:'4:01 PM'
             },
             {
@@ -67,7 +67,8 @@ export default class ordersStatus extends Component {
                 paid:true,
                 timeOrder:'3:27 PM',
                 completed:true,
-                status:'Being prepared',
+                timePick:'4:01 PM',
+                status:'Completed',
                 timepick:'4:01 PM'
             },
             {
@@ -124,7 +125,7 @@ export default class ordersStatus extends Component {
                             <div className="ordersS-search">
                                 <form onSubmit={this.searchQuery}>
                                     <input type="text" className="ordersS-searchbar" placeholder='Search' onChange={this.handleChange}/>
-                                    <button className="ordersS-searchbtn" type="submit"><i className="fas fa-search"></i></button>
+                                    <button className="ordersS-searchbtn" type="submit" disabled={true}><i className="fas fa-search"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -140,9 +141,51 @@ export default class ordersStatus extends Component {
                         <div>Logout</div>
                         </div>)
                     }
-                    {(this.state.activeTab===1) && <Requests requests={this.state.requests}/>}
-                    {(this.state.activeTab===2) && <Orders requests={this.state.requests}/>}
-                    {(this.state.activeTab===3) && <History requests={this.state.requests}/>}
+                    {(this.state.activeTab===1) && <Requests requests={this.state.requests.filter((req)=>{
+                       
+                        if (this.state.searchInput!=="") {
+                            if (req.items.join(' ').toLowerCase().indexOf(this.state.searchInput.toLowerCase())>=0) {
+                                return true
+                            }
+                            else {
+                                return false
+                            }
+                        }
+                        else {
+                            return true
+                        }
+                    
+                    })}/>}
+                    {(this.state.activeTab===2) && <Orders requests={this.state.requests.filter((req)=>{
+                        
+                        if (this.state.searchInput!=="") {
+                            if (req.items.join(' ').toLowerCase().indexOf(this.state.searchInput.toLowerCase())>=0) {
+                                return true
+                            }
+                            else {
+                                return false
+                            }
+                        }
+                        else {
+                            return true
+                        }
+                    
+                    })}/>}
+                    {(this.state.activeTab===3) && <History requests={this.state.requests.filter((req)=>{
+                        
+                        if (this.state.searchInput!=="") {
+                            if (req.items.join(' ').toLowerCase().indexOf(this.state.searchInput.toLowerCase())>=0) {
+                                return true
+                            }
+                            else {
+                                return false
+                            }
+                        }
+                        else {
+                            return true
+                        }
+                    
+                    })}/>}
                 </div> 
                 {
                     this.state.sidebarOpn && (<div className="ordersS-sidebar">
