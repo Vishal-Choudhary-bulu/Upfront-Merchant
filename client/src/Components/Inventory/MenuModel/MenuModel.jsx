@@ -8,11 +8,11 @@ export default class MenuModel extends Component {
 
         this.state = { 
             name: "",
-            category: "",
+            category_id: "",
             is_veg: true,
             price: "",
-            offer: "",
-            photo: ""
+            offer_id: "",
+            photo: "",
         }
     }
 
@@ -22,30 +22,77 @@ export default class MenuModel extends Component {
         })
     }
 
+    handleClear = (e) =>{
+        this.setState({
+            name: "",
+            category_id: "",
+            is_veg: true,
+            price: "",
+            offer_id: "",
+            photo: ""
+        })
+    }
+
+    handleVegToggle = (e)=>{
+        this.setState({
+            is_veg: !this.state.is_veg
+        })
+    }
+
     render() {
+
+        const category_options = (<select name="category_id" value = {this.state.category_id} onChange = {this.handleChanage}>
+            <option defaultValue>select</option>
+            {this.props.categories.map((c,k)=>(
+                <option key = {k} value = {c.category_id}>{c.name}</option>
+            ))}
+        </select>)
+
+        const offer_options = (<select name="offer_id" value = {this.state.offer_id} onChange = {this.handleChanage}>
+            <option defaultValue>select</option>
+            {this.props.offers.map((o,k)=>(
+                <option key = {k} value = {o.offer_id}>{o.name}</option>
+            ))}
+        </select>)
+
+
         const Model = (
             <div className="EModel">
-                <label htmlFor="name">Name</label>
-                <input name="name" type="text" value= { this.state.name} onChange = {this.handleChanage} className = "Model-name"/>
+                <div className="ModelInputs">
+                    <label htmlFor="name">Name</label>
+                    <input name="name" type="text" value= { this.state.name} onChange = {this.handleChanage} className = "Model-name" autoComplete = "off" />
+                </div>
 
-                <label htmlFor="category">Category</label>
-                <input name="category" type="text" value= { this.state.category} onChange = {this.handleChanage} className = "Model-category"/>
+                <div className="ModelInputs">
+                    <label htmlFor="category_id">Category</label>
+                    {category_options}
+                </div>
 
-                <label htmlFor="price">price</label>
-                <input name="price" type="text" value= { this.state.price} onChange = {this.handleChanage} className = "Model-price"/>
+                <div className="ModelInputs">
+                    <label htmlFor="price">price</label>
+                    <input name="price" type="text" value= { this.state.price} onChange = {this.handleChanage} className = "Model-price"
+                    autoComplete = "off"/>
+                </div>
 
-                <label htmlFor="offer">offer</label>
-                <input name="offer" type="text" value= { this.state.offer} onChange = {this.handleChanage} className="Model-offer"/>
+                <div className="ModelInputs">
+                    <label htmlFor="offer_id">offer</label>
+                    {offer_options}
+                </div>
 
-                <label htmlFor="is_veg">Vegetarian</label>
-                <input name="is_veg" type="checkbox" value= { this.state.is_veg} onChange = {this.handleChanage} className = "Model-isveg"/>
+                <div className="ModelInputs">
+                    <label htmlFor="is_veg">Veg</label>
+                    <button onClick={this.handleVegToggle} className="vegbtn" >{this.state.is_veg? ("YES") : ("NO")}</button>
+                </div>
 
-                <label htmlFor="photo">Photo</label>
-                <input name="photo" type="file" accept="jpg" value= { this.state.photo} onChange = {this.handleChanage} className="Model-photo"/>
+                <div className="ModelInputs">
+                    <label htmlFor="photo">Photo</label>
+                    <input name="photo" type="file" accept="image/*" value= { this.state.photo} onChange = {this.handleChanage} className="Model-photo"/>
+                </div>
 
-                
-                <button onClick = {()=>(this.props.Update(this.state))} className="ModelBtn">Update</button>
-                <button onClick= {(()=>this.props.Cancel(this.state))} className="ModelBtn"> Delete </button>
+                <div className="MenuModelButtons">
+                    <button onClick = {()=>(this.props.Update(this.state))} className="ModelBtn">Update</button>
+                    <button onClick= {()=>{this.props.Cancel(); this.handleClear()}} className="ModelBtn"> Delete </button>
+                </div>
             </div>
         )
 

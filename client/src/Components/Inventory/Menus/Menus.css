@@ -6,8 +6,8 @@
 }
 
 .MenusCategory{
-    padding: 20px;
-    height: 45vh;
+    padding: 5% 10px 10px 10px;
+    height: 40vh;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
@@ -17,11 +17,12 @@
 .MenusCategoryTitle{
     font-size: 2em;
     font-weight: bolder;
+    margin: 20px;
 }
 
 .MenusCards{
     display: flex;
-
+    padding-left: 30px;
 }
 
 .MenuPhoto{
@@ -79,3 +80,30 @@
     margin: 5px;
     cursor: pointer;
 }
+
+.DelMenuBtn{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: -4px 0 0 -4px;
+    padding: 5px 9px;
+    border-radius: 50%;
+    position: absolute;
+    outline: none;
+}
+
+.vegbtn{
+    background-color: rgb(253, 253, 253);
+    border: none;
+    width: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    font-weight: bold;
+}
+
+.offeraplBtn{
+    position: absolute;
+    margin-left: -15px;
+    transform: scale(2);
+}
+

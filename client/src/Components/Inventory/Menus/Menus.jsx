@@ -9,6 +9,7 @@ export default class Menus extends Component {
         this.state = { 
             isEditing: false,
             ModelOpen: false,
+            isApplying: false,
             categories: [
                 {
                     name: "Fast Food",
@@ -28,77 +29,50 @@ export default class Menus extends Component {
             ],
             menus: [
                 {
+                    id: 1,
                     name: "pizza",
                     price: 120,
                     category_id: "1AL12",
-                    offer_id: "Dyta"
+                    offer_id: "Dyta",
+                    is_veg: true,
+                    photo: ""
                 },
                 {
-                    name: "burger",
-                    price: 80,
-                    category_id: "1AL12",
-                    offer_id: "Dyta"
-                },
-                {
+                    id: 1,
                     name: "pizza",
                     price: 120,
                     category_id: "1AL12",
-                    offer_id: "Dyta"
+                    offer_id: "Dyta",
+                    is_veg: true,
+                    photo: ""
                 },
                 {
-                    name: "sandwich",
-                    price: 50,
-                    category_id: "1BL12",
-                    offer_id: "Dyta"
-                },
-                {
+                    id: 1,
                     name: "pizza",
                     price: 120,
-                    category_id: "1BL12",
-                    offer_id: "Dyta"
+                    category_id: "1AL12",
+                    offer_id: "Dyta",
+                    is_veg: true,
+                    photo: ""
                 },
                 {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
+                    id: 1,
+                    name: "pizza",
+                    price: 120,
+                    category_id: "1AL12",
+                    offer_id: "Dyta",
+                    is_veg: true,
+                    photo: ""
                 },
                 {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
-                {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
-                {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
-                {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
-                {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
-                {
-                    name: "burger",
-                    price: 90,
-                    category_id: "1CL12",
-                    offer_id: "Dytb"
-                },
+                    id: 1,
+                    name: "pizza",
+                    price: 120,
+                    category_id: "1AL12",
+                    offer_id: "Dyta",
+                    is_veg: true,
+                    photo: ""
+                }
             ],
             offers:[
                 {
@@ -130,6 +104,54 @@ export default class Menus extends Component {
         })
     }
 
+    handleCancel = (e) =>{
+        this.setState({
+            ModelOpen: false
+        })
+    }
+
+    handleModelUpdate = (data)=>{
+        
+
+        if(data.name !== "" &&data.category_id !== "" && data.price !== "" && data.photo !== ""){
+            let newMenu = data;
+            newMenu.id = 2;
+            let UpdatedMenus = this.state.menus;
+
+            UpdatedMenus.push(newMenu);
+
+            this.setState({
+                menus: UpdatedMenus
+            })
+
+            this.setState({
+                ModelOpen: false
+            })
+        }
+
+    }
+
+    handleDeleteMenu = (key)=>{
+        let newMenus = this.state.menus.filter((menu)=>(
+            menu.id !== key
+        ))
+        this.setState({
+            menus: newMenus
+        })
+    }
+
+    handleApplyOffer = (e) => {
+        this.setState({
+            isApplying: true
+        })    
+    }
+
+    handleSave = (e) => {
+        this.setState({
+            isApplying: false
+        })
+    }
+
     render() {
 
         const menus = this.state.categories.map((c,key)=>(
@@ -138,12 +160,13 @@ export default class Menus extends Component {
                     {c.name}
                 </div>
                 <div className="MenusCards">
-                {this.state.menus.map((m, k)=>(
+                {this.state.menus.map((m)=>(
                     m.category_id === c.category_id? (
-                        <div className="MenuCard" key= {k}>
+                        <div className="MenuCard" key= {m.id}>
+                            { this.state.isEditing && <button className="DelMenuBtn" onClick={()=>(this.handleDeleteMenu(m.id))}>&#10008;</button>}
                             <div className="MenuPhoto">
                                 <img src={menuImg} alt="menu"/>
-
+                                {this.state.isApplying && <input type="checkbox" name="apply" className="offeraplBtn"/>}
                                 </div>
                             <div className= "MenusNamePrice">
                                 <div className="MenuName">{m.name}</div>
@@ -159,9 +182,9 @@ export default class Menus extends Component {
 
         const menuEditor = (
             <div className="MenuEditor">
-                <button className="MenuEditBtns"> Add Offer </button>
+                <button className="MenuEditBtns" onClick={this.handleApplyOffer}> Add Offer </button>
                 <button className="MenuEditBtns" onClick = {this.handleModelOpen}> Add Item </button>
-                <button className="MenuEditBtns" onClick={this.handleToggle}> Update </button>
+                <button className="MenuEditBtns" onClick={()=>{this.handleToggle(); this.handleCancel(); this.handleSave()}}> Update </button>
             </div>
         )
 
@@ -175,7 +198,7 @@ export default class Menus extends Component {
             <div className="Menus">
                 {this.state.isEditing? menuEditor : UpdateMenus}
                 {menus}
-                {this.state.ModelOpen && <MenuModel />}
+                {this.state.ModelOpen && <MenuModel Update = {this.handleModelUpdate} Cancel = {this.handleCancel} categories = {this.state.categories} offers  ={this.state.offers}/>}
             </div>
         )
     }
