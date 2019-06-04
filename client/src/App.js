@@ -4,10 +4,9 @@ import Inventory from './Components/Inventory/Inventory/Inventory';
 // import Registration from './Components/Auth/Registration/Registration';
 // import SignUp from './Components/Auth/SignUp/SignUp';
 // import Login from './Components/Auth/Login/Login';
-import Landing from './Components/LandingPage/Landing'
+// import Landing from './Components/LandingPage/Landing'
 // import Profile from './Components/Profile/Profile'
-// import Orders from './Components/Orders/Orders'
-
+// import OrdersStatus from './Components/OrdersStatus/OrdersStatus'
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
       <Inventory />
       {/* <Orders /> */}
       {/* <Landing/> */}
+      {/* <OrdersStatus /> */}
     </div>
   );
 }
