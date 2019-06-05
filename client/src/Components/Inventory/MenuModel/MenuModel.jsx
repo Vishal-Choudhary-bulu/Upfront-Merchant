@@ -48,13 +48,6 @@ export default class MenuModel extends Component {
             ))}
         </select>)
 
-        const offer_options = (<select name="offer_id" value = {this.state.offer_id} onChange = {this.handleChanage}>
-            <option defaultValue>select</option>
-            {this.props.offers.map((o,k)=>(
-                <option key = {k} value = {o.offer_id}>{o.name}</option>
-            ))}
-        </select>)
-
 
         const Model = (
             <div className="EModel">

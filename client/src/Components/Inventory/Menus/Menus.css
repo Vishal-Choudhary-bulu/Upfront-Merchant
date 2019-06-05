@@ -18,6 +18,7 @@
     font-size: 2em;
     font-weight: bolder;
     margin: 20px;
+    display: flex;
 }
 
 .MenusCards{
@@ -97,3 +98,13 @@
     transform: scale(2);
 }
 
+.ApplyOffersDD{
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border:none;
+}
+
+.offeraplBox{
+    transform: scale(2);
+    margin: 15px 10px;
+}
