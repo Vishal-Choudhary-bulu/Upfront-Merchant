@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react'
 import FoodStyles from '../Categories/FoodStyles';
 import './Inventory.css'
 import Menus from '../Menus/Menus';
 
-const Inventory = ()=>{
-    return(
-        <div className="Inventory">
-            <FoodStyles/>
-            <Menus/>
-        </div>
-    )
-}
+export default class Inventory extends Component {
+    constructor(props){
+        super(props);
 
-export default Inventory;
+        this.state = { 
+            MenuEditing: false
+        }
+    }
+
+    handleMenuEditing = (e)=>{
+        this.setState({
+            MenuEditing: !this.state.MenuEditing
+        })
+    } 
+
+    render() {
+        return (
+            <div className="Inventory">
+                {!this.state.MenuEditing && <FoodStyles />}
+                <Menus isOpen = {this.handleMenuEditing}/>
+            </div>
+        )
+    }
+}

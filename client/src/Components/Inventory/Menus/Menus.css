@@ -91,16 +91,6 @@
     outline: none;
 }
 
-.vegbtn{
-    background-color: rgb(253, 253, 253);
-    border: none;
-    width: 20%;
-    border-radius: 10px;
-    padding: 10px;
-    outline: none;
-    font-weight: bold;
-}
-
 .offeraplBtn{
     position: absolute;
     margin-left: -15px;

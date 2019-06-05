@@ -73,6 +73,7 @@ export default class FoodStyles extends Component {
 
        UpdateCategory = (data)=>{
             
+        if(data.name !== ""){
             let newObj = data;
 
             let item = this.state.FoodStyles.filter((item)=>{
@@ -89,7 +90,10 @@ export default class FoodStyles extends Component {
                 FoodStyles : item,
                 ModelIsOpen:false
             })
-
+        }
+        else{
+            alert("please enter a name for the new category");
+        }
        }
 
        DeleteCategory = (data)=>{

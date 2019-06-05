@@ -28,7 +28,7 @@ export default class EditorModel extends Component {
     render() {
         const Model = (<div className="Model">
                         <label htmlFor="name">Category Name</label>
-                            <input name="name" type="text" value= { this.state.name} onChange = {this.handleChanage}/>
+                            <input name="name" type="text" value= { this.state.name} onChange = {this.handleChanage} autoComplete="off"/>
 
                             <button onClick = {()=>(this.props.Update(this.state))} >Update</button>
                             <button onClick= {(()=>this.props.Delete(this.state))}> Delete </button>
@@ -36,8 +36,10 @@ export default class EditorModel extends Component {
                         </div>
                         )    
         return (
-            <div className="EditorModel">
-                {Model}
+            <div className="BlurBg">
+                <div className="EditorModel">
+                     {Model}
+                </div>
             </div>
         )
     }

@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .Model{
@@ -45,4 +46,14 @@
     background-color: rgb(252, 217, 104);
     border:none;
     outline: none;
+}
+
+.BlurBg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 4;
+    background-color: #fff8;
 }

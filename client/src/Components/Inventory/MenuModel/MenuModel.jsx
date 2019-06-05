@@ -75,11 +75,6 @@ export default class MenuModel extends Component {
                 </div>
 
                 <div className="ModelInputs">
-                    <label htmlFor="offer_id">offer</label>
-                    {offer_options}
-                </div>
-
-                <div className="ModelInputs">
                     <label htmlFor="is_veg">Veg</label>
                     <button onClick={this.handleVegToggle} className="vegbtn" >{this.state.is_veg? ("YES") : ("NO")}</button>
                 </div>
@@ -91,14 +86,16 @@ export default class MenuModel extends Component {
 
                 <div className="MenuModelButtons">
                     <button onClick = {()=>(this.props.Update(this.state))} className="ModelBtn">Update</button>
-                    <button onClick= {()=>{this.props.Cancel(); this.handleClear()}} className="ModelBtn"> Delete </button>
+                    <button onClick= {()=>{this.props.Cancel(); this.handleClear()}} className="ModelBtn"> Cancel </button>
                 </div>
             </div>
         )
 
         return (
+            <div className= "theBlurBg">
             <div className="MenuModel">
                 {Model}
+            </div>
             </div>
         )
     }

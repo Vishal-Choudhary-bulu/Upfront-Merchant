@@ -128,6 +128,9 @@ export default class Menus extends Component {
                 ModelOpen: false
             })
         }
+        else{
+            alert("please fill all the details related to the new item")
+        }
 
     }
 
@@ -184,13 +187,13 @@ export default class Menus extends Component {
             <div className="MenuEditor">
                 <button className="MenuEditBtns" onClick={this.handleApplyOffer}> Add Offer </button>
                 <button className="MenuEditBtns" onClick = {this.handleModelOpen}> Add Item </button>
-                <button className="MenuEditBtns" onClick={()=>{this.handleToggle(); this.handleCancel(); this.handleSave()}}> Update </button>
+                <button className="MenuEditBtns" onClick={()=>{this.handleToggle(); this.handleCancel(); this.handleSave(); this.props.isOpen()}}> Update </button>
             </div>
         )
 
         const UpdateMenus = (
             <div className="UpdateMenus">
-                    <button className="MenuEditBtns" onClick = {this.handleToggle}> Update Items </button>  
+                    <button className="MenuEditBtns" onClick = {()=>{this.handleToggle(); this.props.isOpen()}}> Update Items </button>  
             </div>
         )
 

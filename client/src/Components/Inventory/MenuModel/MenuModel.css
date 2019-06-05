@@ -1,10 +1,11 @@
 .MenuModel{
-    width: 50vw;
-    height: 80vh;
+    width: 40vw;
+    height: 60vh;
     z-index: 3;
     position: fixed;
-    top: 10vh;
-    left: 20vw;
+    top: 20vh;
+    z-index: 3;
+    left: 30vw;
     border-radius: 20px;
     background : linear-gradient(90deg, rgb(255, 196, 0),rgb(255, 215, 35));
     box-shadow: 3px 8px 7px 7px rgba(190, 190, 190, 0.616);
@@ -71,7 +72,7 @@
     font-weight: bolder;
 } 
 
-select{
+.ModelInputs select{
     appearance: none;
     width: 30%;
     margin: 10px;
@@ -82,4 +83,23 @@ select{
     outline: none;
     border-radius: 10px;
     border:none;
+}
+
+.theBlurBg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff8;
+}
+
+.vegbtn{
+    background-color: rgb(253, 253, 253);
+    border: none;
+    width: 18%;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 8px 2px;
+    outline: none;
+    font-weight: bold;
 }
