@@ -13,6 +13,7 @@
 .requests-itemsbtn {
     background: linear-gradient(90deg, rgba(255, 208, 0, 0.836), rgba(226, 22, 8, 0.836));
     border:none;
+    
     border-radius:1em;
     outline: none;
     height: 2em;
@@ -43,9 +44,12 @@
     text-align: left;
     justify-content: space-around;
     margin-right: 3vw;
+    border-spacing: 0 15px;
+
 }
 
 .request-row td {
     padding: 1em;
     background-color:#F5F5F5;   
+    border-bottom: .65em solid white;
 }
