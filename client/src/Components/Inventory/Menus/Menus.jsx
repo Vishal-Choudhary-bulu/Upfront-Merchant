@@ -143,8 +143,11 @@ export default class Menus extends Component {
         let newMenus = this.state.menus.filter((menu)=>(
             menu.id !== key
         ))
+
+        let newIDs = this.state.AllToSave.filter(id=>(id!==key))
         this.setState({
-            menus: newMenus
+            menus: newMenus,
+            AllToSave: newIDs
         })
     }
 
