@@ -1,0 +1,85 @@
+.MenuModel{
+    width: 50vw;
+    height: 80vh;
+    z-index: 3;
+    position: fixed;
+    top: 10vh;
+    left: 20vw;
+    border-radius: 20px;
+    background : linear-gradient(90deg, rgb(255, 196, 0),rgb(255, 215, 35));
+    box-shadow: 3px 8px 7px 7px rgba(190, 190, 190, 0.616);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ModelInputs{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin:20px;
+}
+
+.EModel label{
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding: 5px;
+    margin : 5px;
+}
+
+.EModel input{
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px; 
+    outline: none;
+    margin : 10px;
+}
+
+.MenuModelButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.ModelBtn{
+    width: 20%;;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 550;
+    padding: 5px;
+    background-color: rgb(252, 217, 104);
+    border:none;
+    outline: none;
+}
+
+.ModelButtons button{
+    margin: 2px;
+}
+
+.Model-photo::-webkit-file-upload-button {
+    background-color: #fff;
+    /* border: 2px solid black; */
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    cursor: grab;
+    font-weight: bolder;
+} 
+
+select{
+    appearance: none;
+    width: 30%;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border:none;
+}
