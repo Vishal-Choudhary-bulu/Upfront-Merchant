@@ -10,10 +10,8 @@ export default class Menus extends Component {
             isEditing: false,
             ModelOpen: false,
             isApplying: false,
-            SelectedOffer_id: "",
-            ApplyToAll: false,
-            AllToSave: [],
-            CategoriesToSave: [],
+            SelectedOffer_id: "", 
+            AllToSave: [], 
             categories: [
                 {
                     name: "Fast Food",
@@ -169,46 +167,8 @@ export default class Menus extends Component {
             })
     }
 
-    handleApplyAll = (cid) =>{
-        
-        let dishes = this.state.menus
-
-        let ids = this.state.AllToSave
-        
-        let newCatTosave = this.state.CategoriesToSave
-        dishes.forEach(dish => {
-            if(!newCatTosave.includes(cid))
-                if(dish.category_id === cid){
-                    if(!ids.includes(dish.id))ids.push(dish.id) 
-                }
-            else{
-                let rems = dishes.filter(dish=>(dish.category_id !== cid))
-                ids = []
-                rems.forEach(dish=>(
-                    ids.push(dish.id)
-                ))
-            }
-        });
-         newCatTosave.push(cid);
-
-        
-        this.setState({
-            ApplyToAll: !this.state.ApplyToAll,
-            CategoriesToSave: newCatTosave,
-            AllToSave : ids
-        })
-    }
-
     handleOfferonOne = (id) =>{
         let ids = this.state.AllToSave
-
-        if(this.state.ApplyToAll){
-            ids = ids.filter(i=>(i !==id))
-            this.setState({
-                ApplyToAll : false,
-                AllToSave: ids
-            })
-        }else{
                 
             if(!ids.includes(id))ids.push(id)
             else{
@@ -218,7 +178,6 @@ export default class Menus extends Component {
             this.setState({
                 AllToSave : ids
             })
-        }
     }
 
     handleCheckBox = (id)=>{
@@ -238,8 +197,7 @@ export default class Menus extends Component {
         const menus = this.state.categories.map((c,key)=>(
             <div className = "MenusCategory" key = {key}>
                 <div className="MenusCategoryTitle">
-                    {c.name} {this.state.SelectedOffer_id !== "" && <input type="checkbox" name="applyAll" className="offeraplBox" 
-                    onChange={(()=>(this.handleApplyAll(c.category_id)))} checked = {this.state.ApplyToAll}/>}
+                    {c.name} 
                 </div>
                 <div className="MenusCards">
                 {this.state.menus.map((m)=>(
