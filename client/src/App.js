@@ -11,7 +11,7 @@ import OrdersStatus from './Components/OrdersStatus/OrdersStatus'
 function App() {
   return (
     <div className="App">
-      <OrdersStatus />
+      <Profile />
     </div>
   );
 }
