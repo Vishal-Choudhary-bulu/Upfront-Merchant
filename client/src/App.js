@@ -11,9 +11,7 @@ import Inventory from './Components/Inventory/Inventory/Inventory';
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Profile />
-=======
+      {/* <Profile /> */}
       {/* <Login/> */}
       {/* <SignUp /> */}
       {/* <Registration /> */}
@@ -21,7 +19,6 @@ function App() {
       {/* <Orders /> */}
       {/* <Landing/> */}
       {/* <OrdersStatus /> */}
->>>>>>> 1c565769b7fbc5a4617bb4b4ff5ee674c07a2b57
     </div>
   );
 }
