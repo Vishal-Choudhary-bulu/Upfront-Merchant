@@ -12,6 +12,7 @@ import Loading from './Components/Loading/Loading'
 function App() {
   return (
     <div className="App">
+      {/* <Profile /> */}
       {/* <Login/> */}
       {/* <SignUp /> */}
       {/* <Registration /> */}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './FoodStyles.css'
+import uuid from 'uuid'
 import EditorModel from '../EditorModel/EditorModel';
 
 export default class FoodStyles extends Component {
@@ -60,10 +61,11 @@ export default class FoodStyles extends Component {
            this.setState({
                ModelIsOpen: true
            })
-
+        let id = uuid()
+           console.log(id)
            let item = {
                name : "",
-               id: "9"
+               id: id
            }
 
            this.setState({
@@ -73,6 +75,7 @@ export default class FoodStyles extends Component {
 
        UpdateCategory = (data)=>{
             
+        if(data.name !== ""){
             let newObj = data;
 
             let item = this.state.FoodStyles.filter((item)=>{
@@ -89,7 +92,10 @@ export default class FoodStyles extends Component {
                 FoodStyles : item,
                 ModelIsOpen:false
             })
-
+        }
+        else{
+            alert("please enter a name for the new category");
+        }
        }
 
        DeleteCategory = (data)=>{
