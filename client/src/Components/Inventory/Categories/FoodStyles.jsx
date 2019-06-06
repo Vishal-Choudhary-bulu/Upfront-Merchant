@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './FoodStyles.css'
+import uuid from 'uuid'
 import EditorModel from '../EditorModel/EditorModel';
 
 export default class FoodStyles extends Component {
@@ -60,10 +61,11 @@ export default class FoodStyles extends Component {
            this.setState({
                ModelIsOpen: true
            })
-
+        let id = uuid()
+           console.log(id)
            let item = {
                name : "",
-               id: "9"
+               id: id
            }
 
            this.setState({

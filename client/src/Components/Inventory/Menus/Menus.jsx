@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import uuid from 'uuid'
 import './Menus.css'
-import menuImg from "./../../../Assets/Mask Group 3.png"
+import cake from './../../../Assets/Mask Group 4.png'
 import MenuModel from '../MenuModel/MenuModel';
 export default class Menus extends Component {
     constructor(props){
@@ -120,7 +121,7 @@ export default class Menus extends Component {
 
         if(data.name !== "" &&data.category_id !== "" && data.price !== "" && data.photo !== ""){
             let newMenu = data;
-            newMenu.id = 2;
+            newMenu.id = uuid();
             let UpdatedMenus = this.state.menus;
 
             UpdatedMenus.push(newMenu);
@@ -188,6 +189,27 @@ export default class Menus extends Component {
         else return false
     }
 
+
+    handleApply = (e)=>{
+        let AppliableIds = this.state.AllToSave
+
+        let newMenus = this.state.menus
+
+        newMenus.forEach(menu=>{
+            if(AppliableIds.includes(menu.id)){
+                menu.offer_id = this.state.SelectedOffer_id
+            }
+        })
+
+        this.setState({
+            menus: newMenus,
+            isApplying: false,
+            SelectedOffer_id: "",
+            AllToSave: []
+        })
+
+    }
+
     render() {
 
         const offer_options = (<select className="ApplyOffersDD" name="SelectedOffer_id" value = {this.state.SelectedOffer_id} onChange = {this.handleOfferSelection}>
@@ -206,11 +228,11 @@ export default class Menus extends Component {
                 {this.state.menus.map((m)=>(
                     m.category_id === c.category_id? (
                         <div className="MenuCard" key= {m.id}>
-                            { this.state.isEditing && <button className="DelMenuBtn" onClick={()=>(this.handleDeleteMenu(m.id))}>&#10008;</button>}
+                            { this.state.isEditing && !this.state.isApplying && <button className="DelMenuBtn" onClick={()=>(this.handleDeleteMenu(m.id))}>&#10008;</button>}
                             <div className="MenuPhoto">
-                                <img src={menuImg} alt="menu"/>
-                                { this.state.SelectedOffer_id !== "" && <input type="checkbox" name="apply" className="offeraplBtn" onChange = {()=>(this.handleOfferonOne(m.id))} checked = {this.handleCheckBox(m.id)}/>}
-                                </div>
+                                <img src={cake} alt="menu"/> {/*m.photo here*/}
+                            </div>
+                            { this.state.SelectedOffer_id !== "" && <input type="checkbox" name="apply" className="offeraplBtn" onChange = {()=>(this.handleOfferonOne(m.id))} checked = {this.handleCheckBox(m.id)}/>}
                             <div className= "MenusNamePrice">
                                 <div className="MenuName">{m.name}</div>
                                 <div className="MenuPrice">Rs. {m.price* 80 / 100}</div>

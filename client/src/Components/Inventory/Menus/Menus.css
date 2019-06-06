@@ -7,11 +7,11 @@
 
 .MenusCategory{
     padding: 5% 10px 10px 10px;
-    height: 40vh;
+    height: 35vh;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .MenusCategoryTitle{
@@ -94,7 +94,7 @@
 
 .offeraplBtn{
     position: absolute;
-    margin-left: -15px;
+    /* margin-left: -15px; */
     transform: scale(2);
 }
 
