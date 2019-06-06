@@ -7,6 +7,7 @@ import Inventory from './Components/Inventory/Inventory/Inventory';
 // import Landing from './Components/LandingPage/Landing'
 // import Profile from './Components/Profile/Profile'
 // import OrdersStatus from './Components/OrdersStatus/OrdersStatus'
+import Loading from './Components/Loading/Loading'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* <Login/> */}
       {/* <SignUp /> */}
       {/* <Registration /> */}
-      <Inventory />
+      {/*<Loading />*/}
       {/* <Orders /> */}
       {/* <Landing/> */}
       {/* <OrdersStatus /> */}

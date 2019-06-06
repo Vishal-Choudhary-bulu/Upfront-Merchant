@@ -1,0 +1,60 @@
+.Loading{
+    display: flex;
+}
+
+.Loading-left-card{
+    width:15vw;
+    height:100vh;
+    background-color:rgba(190, 188, 188, 0.507);    
+}
+
+.loading-right-card {
+    padding:10vh 3vw;
+    width:85vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.hrbar {
+    width:100%;
+    height:5vh;
+    background-color: rgba(190, 188, 188, 0.507);
+    border-radius: 10px;
+}
+
+.loading-menu-cards {
+    width:100%;
+    height:30vh;
+    display:flex;
+    justify-content: space-between;
+    padding: 5vh 0;
+}
+
+.Loadbox {
+    width:22%;
+    height: 28vh;
+    background-color: rgba(190, 188, 188, 0.507);
+    border-radius: 5px;
+}
+
+.whitebar{
+    background-color: rgba(235, 232, 232, 0.76);
+    width:20%;
+    height: 100%;
+    filter:blur(10px);
+    animation: effect 2s ease-in-out  infinite ;
+    
+}
+
+@keyframes effect{
+    from{
+        margin-left: 0;
+
+    }
+    to{
+        margin-left: 80%;
+
+    }
+}
