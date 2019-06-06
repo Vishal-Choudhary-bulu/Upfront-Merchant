@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden; 
 }
 
 code {
@@ -19,4 +20,25 @@ code {
 
 button{
    cursor: pointer;
+}
+
+
+::-webkit-scrollbar{
+  width: 5px;
+  display: none;
+}
+
+
+::-webkit-scrollbar-track{
+  border-radius:10px;
+  background-color: rgb(241, 244, 247);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #387CA6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: coral;
 }

@@ -1,17 +1,22 @@
 .Menus{
     height: 100%;
+    width: auto;
+    min-width: 100vw;
     display: flex;
     flex-flow: column;
-    /* overflow-x:hidden; */
+    overflow-x: hidden;
 }
 
 .MenusCategory{
     padding: 5% 10px 10px 10px;
-    height: 35vh;
+    height: 50vh;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
+    overflow-y: hidden;
 }
 
 .MenusCategoryTitle{
@@ -19,15 +24,22 @@
     font-weight: bolder;
     margin: 20px;
     display: flex;
+    position: absolute;
+    z-index: 2;
 }
 
 .MenusCards{
     display: flex;
+    margin-top:10vh; 
     padding-left: 30px;
+    padding-right: 100vw;
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
 }
 
 .MenuPhoto{
     overflow: hidden;
+    margin-top: -20px;
 }
 .MenuPhoto img{
     width: 100%;
@@ -40,9 +52,11 @@
     width: 40vh;
     height: 35vh;
     box-shadow: 2px 3px 3px 3px rgba(212, 212, 212, 0.308);
-    display: grid;
-    grid-template-rows: 4fr 1fr;
-    grid-auto-rows: 30vw;
+    /* display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-auto-rows: 30vw; */
+    display: flex;
+    flex-direction: column;
 }
 
 .MenusNamePrice{
@@ -52,10 +66,11 @@
     flex-flow: row;
     align-items:center;
     justify-content: space-between;
+    height: 10%;
 }
 
 .MenusNamePrice{
-    padding: 1px 10px;
+    padding: 5px 10px;
 }
 
 
@@ -85,15 +100,17 @@
 .DelMenuBtn{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
-    margin: -4px 0 0 -4px;
+    margin: -4px 0 0px -4px;
     padding: 5px 9px;
     border-radius: 50%;
-    position: absolute;
+    width: 30px;
+    height: 30px;
+    position: relative;
     outline: none;
 }
 
 .offeraplBtn{
-    position: absolute;
+    position: relative;
     /* margin-left: -15px; */
     transform: scale(2);
 }

@@ -227,12 +227,13 @@ export default class Menus extends Component {
                 <div className="MenusCards">
                 {this.state.menus.map((m)=>(
                     m.category_id === c.category_id? (
+                        
                         <div className="MenuCard" key= {m.id}>
                             { this.state.isEditing && !this.state.isApplying && <button className="DelMenuBtn" onClick={()=>(this.handleDeleteMenu(m.id))}>&#10008;</button>}
+                            { this.state.SelectedOffer_id !== "" && <input type="checkbox" name="apply" className="offeraplBtn" onChange = {()=>(this.handleOfferonOne(m.id))} checked = {this.handleCheckBox(m.id)}/>}
                             <div className="MenuPhoto">
                                 <img src={cake} alt="menu"/> {/*m.photo here*/}
                             </div>
-                            { this.state.SelectedOffer_id !== "" && <input type="checkbox" name="apply" className="offeraplBtn" onChange = {()=>(this.handleOfferonOne(m.id))} checked = {this.handleCheckBox(m.id)}/>}
                             <div className= "MenusNamePrice">
                                 <div className="MenuName">{m.name}</div>
                                 <div className="MenuPrice">Rs. {m.price* 80 / 100}</div>
