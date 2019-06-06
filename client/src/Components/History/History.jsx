@@ -6,7 +6,7 @@ export default class History extends Component {
     orders = this.props.requests.filter((f)=>(f.completed)).map((e,key)=>{
 
         return (
-            <div className='request-box'>
+            <div className='request-box' key={key}>
                 <div className='history-box-key'>{key+1}</div>
                 <div className='history-inner-box'>
                     <div className='history-box-item'>
